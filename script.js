@@ -11,6 +11,11 @@ const latitude = document.getElementById('latitude');
 const longitude = document.getElementById('longitude');
 const sunrise = document.getElementById('sunrise');
 const sunset = document.getElementById('sunset');
+const pressure = document.getElementById('pressure');
+const visibility = document.getElementById('visibility');
+const uvindex = document.getElementById('uv');
+const cloudCover = document.getElementById('clouds');
+const condition = document.getElementById('condition');
 
 async function getData(cityName){
     const promise = await fetch(
@@ -38,5 +43,9 @@ button.addEventListener('click', async () => {
     longitude.innerText = `${result.location.lon}°`;
     sunrise.innerText = `${result.current.astro.sunrise}`;
     sunset.innerText = `${result.current.astro.sunset}`;
-
+    pressure.innerText = `${result.current.pressure} hPa`;
+    visibility.innerText = `${result.current.visibility} km`;
+    uvindex.innerText = `${result.current.uv_index}`;
+    cloudCover.innerText = `${result.current.cloudcover}%`;
+    condition.innerText = `${result.current.weather_descriptions[0]}`;
 })
