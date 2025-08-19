@@ -140,11 +140,10 @@
 
     /* ============== CURRENT WEATHER ============== */
     .current {
-      display: grid;
       grid-template-columns: 1.2fr .8fr;
       gap: 1rem;
       align-items: center;
-      min-height: 260px;
+      min-height: 200px;
     }
     @media (max-width: 720px) {
       .current { grid-template-columns: 1fr; text-align: center; }
@@ -160,8 +159,7 @@
     .condition { font-size: clamp(1rem, 2.4vw, 1.25rem); font-weight: 700; }
 
     .meta {
-      display: grid; gap: .6rem;
-      grid-template-columns: repeat(3, minmax(0,1fr));
+      display: flex; gap: .6rem;
     }
     .chip {
       display: flex; align-items: center; gap: .5rem;
@@ -181,25 +179,6 @@
     /* icon dropshadow */
     .big-icon svg { filter: drop-shadow(0 12px 22px rgba(0,0,0,.22)); }
 
-    /* ============== FORECAST ============== */
-    .forecast {
-      display: grid; grid-template-columns: repeat(7, minmax(120px,1fr)); gap: .8rem;
-    }
-    @media (max-width: 980px) { .forecast { grid-template-columns: repeat(4, minmax(120px,1fr)); } }
-    @media (max-width: 640px) { .forecast { grid-template-columns: repeat(2, minmax(120px,1fr)); } }
-
-    .tile {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: .9rem;
-      text-align: center;
-      box-shadow: var(--shadow);
-      transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
-    }
-    .tile:hover { transform: translateY(-2px); background: var(--surface-strong); box-shadow: 0 16px 42px rgba(0,0,0,0.2); }
-
-    .tile h4 { margin: 0 0 .4rem; font-size: .95rem; opacity: .85; font-weight: 700; letter-spacing: .02em; }
     .tile .minmax { font-weight: 700; }
 
     /* ============== DETAILS ============== */

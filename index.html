@@ -58,8 +58,12 @@
               <div class="temp" id="city_temp">22<span class="deg">°</span></div>
               <div>
                 <div class="condition" id="condition">Partly cloudy</div>
-                <div class="muted">Lon: <strong id="longitude">26</strong> • Lat: <strong id="latitude">16</strong></div>
+                <div class="muted">Lon: <strong id="longitude">26</strong> Lat: <strong id="latitude">16</strong></div>
               </div>
+                 <div class="row muted-sm" style="margin-top:.6rem">
+              <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v18" stroke="currentColor" stroke-width="1.6"/></svg> -->
+              <span>Sunrise <strong id="sunrise">06:12</strong> <br> Sunset <strong id="sunset">19:41</strong></span>
+            </div>
             </div>
 
             <div class="meta" style="margin-top: .9rem;">
@@ -67,48 +71,6 @@
               <div class="chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0" stroke="currentColor" stroke-width="1.6"/><path d="M7 12a5 5 0 1 0 10 0" stroke="currentColor" stroke-width="1.6"/></svg> Humidity <strong id="humidity">62%</strong></div>
               <div class="chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h12M12 4l8 8-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Wind <strong id="wind">11 km/h</strong></div>
             </div>
-          </div>
-
-          <div class="weather-visual">
-            <div class="big-icon" aria-hidden="true">
-              <!-- Big cloud/sun icon -->
-              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-opacity="0.25"/></filter>
-                </defs>
-                <g filter="url(#shadow)">
-                  <circle cx="74" cy="42" r="20" fill="currentColor" opacity="0.95"/>
-                  <ellipse cx="62" cy="70" rx="38" ry="20" fill="currentColor" opacity="0.9"/>
-                  <ellipse cx="38" cy="74" rx="26" ry="16" fill="currentColor" opacity="0.85"/>
-                </g>
-              </svg>
-            </div>
-            <div class="row muted-sm" style="margin-top:.6rem">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v18" stroke="currentColor" stroke-width="1.6"/></svg>
-              <span>Sunrise <strong id="sunrise">06:12</strong> • Sunset <strong id="sunset">19:41</strong></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div style="margin-top: 1rem;">
-          <h3 class="muted" style="margin:0 0 .6rem; font-weight:800; letter-spacing:.02em">7‑Day Forecast</h3>
-          <div class="forecast" id="forecast">
-            <!-- Example tiles (replace with data) -->
-            <div class="tile">
-              <h4>Fri</h4>
-              <div aria-hidden="true" style="height:48px; display:grid; place-items:center">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M7 15h10a4 4 0 1 0-1.2-7.8A5 5 0 0 0 6 9.6 3.5 3.5 0 0 0 7 15Z" fill="currentColor"/></svg>
-              </div>
-              <div class="minmax">26° / 16°</div>
-            </div>
-            <div class="tile"><h4>Sat</h4><div style="height:48px; display:grid; place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg></div><div class="minmax">27° / 17°</div></div>
-            <div class="tile"><h4>Sun</h4><div style="height:48px; display:grid; place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4 13a6 6 0 1 0 12 0H4Z" fill="currentColor"/></svg></div><div class="minmax">23° / 15°</div></div>
-            <div class="tile"><h4>Mon</h4><div style="height:48px; display:grid; place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M7 15h10a4 4 0 1 0-1.2-7.8A5 5 0 0 0 6 9.6 3.5 3.5 0 0 0 7 15Z" fill="currentColor"/></svg></div><div class="minmax">25° / 16°</div></div>
-            <div class="tile"><h4>Tue</h4><div style="height:48px; display:grid; place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg></div><div class="minmax">28° / 18°</div></div>
-            <div class="tile"><h4>Wed</h4><div style="height:48px; display:grid; place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4 13a6 6 0 1 0 12 0H4Z" fill="currentColor"/></svg></div><div class="minmax">24° / 17°</div></div>
-            <div class="tile"><h4>Thu</h4><div style="height:48px; display:grid; place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M7 15h10a4 4 0 1 0-1.2-7.8A5 5 0 0 0 6 9.6 3.5 3.5 0 0 0 7 15Z" fill="currentColor"/></svg></div><div class="minmax">26° / 16°</div></div>
           </div>
         </div>
       </section>
@@ -118,15 +80,14 @@
         <section class="card">
           <div class="spaced">
             <h3 style="margin:0; font-weight:800; letter-spacing:.02em">Today’s Details</h3>
-            <span class="muted-sm">Demo data</span>
           </div>
           <div class="kv" style="margin-top:.8rem">
             <div class="row kv row"><span class="label">Pressure</span><span class="value" id="pressure">1014 hPa</span></div>
             <div class="row kv row"><span class="label">Visibility</span><span class="value" id="visibility">10 km</span></div>
             <div class="row kv row"><span class="label">UV Index</span><span class="value" id="uv">5</span></div>
             <div class="row kv row"><span class="label">Cloud Cover</span><span class="value" id="clouds">35%</span></div>
-            <div class="row kv row"><span class="label">Dew Point</span><span class="value" id="dew">14°</span></div>
-            <div class="row kv row"><span class="label">Precipitation</span><span class="value" id="precip">0.0 mm</span></div>
+            <!-- <div class="row kv row"><span class="label">Dew Point</span><span class="value" id="dew">14°</span></div>
+            <div class="row kv row"><span class="label">Precipitation</span><span class="value" id="precip">0.0 mm</span></div> -->
           </div>
         </section>
       </aside>
