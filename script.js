@@ -49,3 +49,32 @@ button.addEventListener('click', async () => {
     cloudCover.innerText = `${result.current.cloudcover}%`;
     condition.innerText = `${result.current.weather_descriptions[0]}`;
 })
+
+
+const currentLocation = document.getElementById('use_location');
+
+currentLocation.addEventListener('click' , () => {
+    fetch('https://ipinfo.io/json?token=cb3b73313080ed')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        cityName.innerText = `${data.city}, ${data.region}, ${data.country}`;
+        getData(`${data.city}, ${data.region}, ${data.country}`).then(result => {
+            cityTime.innerText = `${result.location.localtime}`;
+            cityTemp.innerText = `${result.current.temperature}°C`;
+            tempFeels.innerText = `${result.current.feelslike}°C`;
+            humidity.innerText = `${result.current.humidity}%`;
+            wind.innerText = `${result.current.wind_speed} km/h`;
+            latitude.innerText = `${result.location.lat}°`;
+            longitude.innerText = `${result.location.lon}°`;
+            sunrise.innerText = `${result.current.astro.sunrise}`;
+            sunset.innerText = `${result.current.astro.sunset}`;
+            pressure.innerText = `${result.current.pressure} hPa`;
+            visibility.innerText = `${result.current.visibility} km`;
+            uvindex.innerText = `${result.current.uv_index}`;
+            cloudCover.innerText = `${result.current.cloudcover}%`;
+            condition.innerText = `${result.current.weather_descriptions[0]}`;
+        });
+    });
+    
+})
